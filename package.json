@@ -2,7 +2,7 @@
   "name": "discussion-board",
   "private": true,
   "scripts": {
-    "local": "MONGO_URL='mongodb+srv://<username>:<password@<hostname>/meteor_discussion?authSource=admin&replicaSet=atlas-ycd9lv-shard-0&readPreference=primary&ssl=true' meteor run --settings settings-local.json --port 4003",
+    "local": "MONGO_URL='mongodb+srv://<username>:<password@<hostname>/meteor_discussion?authSource=admin&replicaSet=<replicaSet>&readPreference=primary&ssl=true' meteor run --settings settings-local.json --port 4000",
     "start": "meteor run",
     "test": "meteor test --once --driver-package meteortesting:mocha",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
