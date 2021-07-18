@@ -8,7 +8,7 @@ The application's demo is hosted [here](http://discussion-board-kunj.meteorapp.c
 
 ## Installation
 
-Use the package manager [meteor](https://www.npmjs.com/) & [npm](https://www.npmjs.com/)to install the packages for the project.
+Use the package manager [meteor](https://www.npmjs.com/) & [npm](https://www.npmjs.com/) to install the packages for the project.
 
 Go to the directory where you would like to clone the [repo](https://github.com/KunjManiar/meteor-discussion-board).
 
