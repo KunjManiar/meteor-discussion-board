@@ -1,0 +1,20 @@
+.main-add-comments-div {
+	/* ,.comments { */
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	padding: 10px;
+	width: calc(100% - 24px);
+	margin: 10px 0 10px 0;
+}
+
+.add-comment-div {
+	margin: 5px 0 5px 0;
+	width: calc(100% - 40px);
+}
+
+.comment-buttons {
+	flex-direction: row;
+	justify-content: flex-end;
+	width: calc(100% - 10px);
+	margin: 5px 0 5px 0;
+	width: calc(100% - 10px);
+}

@@ -1,0 +1,42 @@
+.text-area {
+	width: calc(100% - 10px);
+	border: 0;
+	background: #eee;
+	padding: 15px;
+	min-height: 60px;
+	font-family: "Montserrat", sans-serif;
+	font-size: 15px;
+}
+
+.text-area:focus-visible {
+	width: calc(100% - 10px);
+	border: 0;
+	background: #eee;
+	padding: 15px;
+	min-height: 60px;
+	font-family: "Montserrat", sans-serif;
+	outline: none;
+	border: 0;
+}
+
+.text-area:active {
+	width: calc(100% - 10px);
+	border: 0;
+	background: #eee;
+	padding: 15px;
+	min-height: 60px;
+	font-family: "Montserrat", sans-serif;
+	outline: none;
+	border: 0;
+}
+
+.text-area:hover {
+	width: calc(100% - 10px);
+	border: 0;
+	background: #eee;
+	padding: 15px;
+	min-height: 60px;
+	font-family: "Montserrat", sans-serif;
+	outline: none;
+	border: 0;
+}

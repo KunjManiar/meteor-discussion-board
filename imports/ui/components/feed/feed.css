@@ -1,0 +1,47 @@
+.feed-div {
+	background: #f7f7f7;
+	padding: 40px;
+	margin: 10px 0 10px 0;
+	width: calc(100% - 80px);
+}
+
+.feed-heading-person-details {
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	height: 40px;
+}
+
+.feed-heading-person-details-p {
+	margin: 0;
+	padding: 5px;
+	font-size: 14px;
+}
+
+.feed-heading-person-details-p-dot {
+	margin: 0;
+	padding: 5px;
+	font-size: 20px;
+	font-weight: 900;
+}
+
+.feed-heading-person-details-img {
+	padding: 5px;
+	border-radius: 50%;
+}
+
+.feed-heading-header-details {
+	align-items: flex-start;
+	padding: 0 10px 0 10px;
+}
+
+.feed-description {
+	align-items: flex-start;
+}
+
+.feed-description-pre {
+	white-space: pre-wrap;
+}
+
+.feed-heading {
+}

@@ -1,0 +1,67 @@
+.new-discussion-div {
+	padding: 10px;
+	width: calc(100% - 24px);
+	margin: 10px 0 10px 0;
+	/* height: 100vh; */
+}
+
+.new-discussion-heading-div {
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.new-discussion-heading-input {
+	font-size: 35px;
+	font-family: "Montserrat", sans-serif;
+	border: 0px;
+	/* border-bottom: 1px #e3e3e3 solid; */
+	width: 100%;
+	padding: 7px;
+	margin-bottom: 1px;
+}
+
+.new-discussion-heading-input:focus-visible {
+	font-size: 35px;
+	font-family: "Montserrat", sans-serif;
+	border: 0px;
+	/* border-bottom: 1px #002aff solid; */
+	width: 100%;
+	padding: 7px;
+	outline: none;
+	margin-bottom: 1px;
+}
+
+.new-discussion-heading-input:active {
+	font-size: 35px;
+	font-family: "Montserrat", sans-serif;
+	border: 0px;
+	/* border-bottom: 1px #00a2ff solid; */
+	width: 100%;
+	padding: 7px;
+	outline: none;
+	margin-bottom: 1px;
+}
+
+.new-discussion-heading-input:hover {
+	font-size: 35px;
+	font-family: "Montserrat", sans-serif;
+	border: 0px;
+	/* border-bottom: 1px #000 solid; */
+	width: 100%;
+	padding: 7px;
+	outline: none;
+	margin-bottom: 1px;
+}
+
+.new-discussion-description-div {
+	margin: 5px 0 5px 0;
+	width: calc(100% - 40px);
+}
+
+.new-discussion-buttons {
+	flex-direction: row;
+	justify-content: flex-end;
+	width: calc(100% - 10px);
+	margin: 5px 0 5px 0;
+	width: calc(100% - 10px);
+}

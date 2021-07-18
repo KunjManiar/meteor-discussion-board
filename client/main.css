@@ -1,0 +1,74 @@
+html {
+	margin: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	margin: 0px;
+	min-height: 100%;
+	width: 100%;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+		Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+}
+
+div,
+form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+}
+
+.main-div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	font-family: "Montserrat", sans-serif;
+}
+
+.form-div {
+	height: calc(100vh - 75px);
+	max-width: 356px;
+	margin-top: 75px;
+}
+
+.login-form {
+	max-width: 350px;
+}
+
+.center-form-heading {
+	color: rgba(var(--color_15), var(--alpha-color_15, 1));
+	font-style: italic;
+	font-weight: normal;
+	font-family: "AdobeCaslonW01", sans-serif;
+	font-size: 48px;
+	line-height: 48px;
+	margin-bottom: 24px;
+	margin-top: 10px;
+	padding-top: 0;
+	padding-bottom: 0;
+	text-align: center;
+}
+
+.Adobe-Caslon {
+	font-family: "AdobeCaslonW01", sans-serif;
+}
+.italic {
+	font-style: italic;
+}
+
+.discussion {
+	width: 90%;
+	justify-content: flex-start;
+}
+
+#react-target {
+	/* height: 100vh; */
+	/* width: 100vh; */
+}

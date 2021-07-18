@@ -1,0 +1,57 @@
+.comments {
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	padding: 10px;
+	width: calc(100% - 40px);
+	margin: 10px 0 10px 0;
+}
+
+.single-comment-border-top {
+	border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* .single-comment-border-bottom {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+} */
+
+.single-comment-main-div {
+	/* border-top: 1px solid rgba(0, 0, 0, 0.2); */
+	/* border-left: 0;
+	border-right: 0; */
+	width: calc(100% - 40px);
+	margin: 0 5px 0 5px;
+	padding: 5px 10px 5px 10px;
+}
+.single-comment-div {
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.single-comment {
+	font-size: 14px;
+	padding: 5px;
+	margin: 0;
+	white-space: pre-wrap;
+}
+
+.single-commemt-person-details {
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.single-heading-person-details-img {
+	margin: 0;
+	padding: 5px;
+	border-radius: 50%;
+}
+
+.single-comment-person-details-p-dot {
+	margin: 0;
+	padding: 5px;
+	font-size: 12px;
+}
+
+.single-comment-person-details-p {
+	margin: 0;
+	padding: 5px;
+	font-size: 12px;
+}

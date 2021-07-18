@@ -1,0 +1,19 @@
+.heading {
+	flex-direction: row;
+	position: fixed;
+	top: 0;
+	background: #fff;
+	justify-content: space-between;
+	padding: 10px 20px 10px 20px;
+	width: calc(100% - 40px);
+}
+
+.heading-left {
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.heading-right {
+	flex-direction: row;
+	justify-content: flex-end;
+}
