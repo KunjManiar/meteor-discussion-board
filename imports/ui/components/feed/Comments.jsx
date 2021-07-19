@@ -29,27 +29,25 @@ const Comment = ({ borderTop = false, comment }) => {
 	}
 
 	return (
-		<div className="comments">
-			<div className={`single-comment-main-div ${borderClasses}`}>
-				<div className="single-comment-div">
-					<pre className="single-comment">{comment.text}</pre>
-				</div>
-				<div className="single-commemt-person-details">
-					<img
-						className="single-heading-person-details-img"
-						src={`https://ui-avatars.com/api/?name=${user.username}`}
-						height={18}
-						width={18}
-					/>
-					<p className="single-comment-person-details-p-dot"> • </p>
-					<p className="single-comment-person-details-p">
-						{user.emails && user.emails[0].address}
-					</p>
-					<p className="single-comment-person-details-p-dot"> • </p>
-					<p className="single-comment-person-details-p">
-						{moment(comment.createdAt).format("MMMM Do YYYY, h:mm:ss a")}
-					</p>
-				</div>
+		<div className={`single-comment-main-div ${borderClasses}`}>
+			<div className="single-comment-div">
+				<pre className="single-comment">{comment.text}</pre>
+			</div>
+			<div className="single-commemt-person-details">
+				<img
+					className="single-heading-person-details-img"
+					src={`https://ui-avatars.com/api/?name=${user.username}`}
+					height={18}
+					width={18}
+				/>
+				<p className="single-comment-person-details-p-dot"> • </p>
+				<p className="single-comment-person-details-p">
+					{user.emails && user.emails[0].address}
+				</p>
+				<p className="single-comment-person-details-p-dot"> • </p>
+				<p className="single-comment-person-details-p">
+					{moment(comment.createdAt).format("MMMM Do YYYY, h:mm:ss a")}
+				</p>
 			</div>
 		</div>
 	);
@@ -83,10 +81,14 @@ export default Comments = ({ feedId }) => {
 		return <Loader fullPage={false} />;
 	}
 
+	if (comments_length === 0) {
+		return <></>;
+	}
+
 	return (
-		<div>
-			{comments.map((comment) => {
-				if (comments_length == 1) {
+		<div className="comments">
+			{comments.map((comment, index) => {
+				if (index == 0) {
 					return <Comment comment={comment} key={comment._id} />;
 				}
 				return <Comment comment={comment} borderTop={true} key={comment._id} />;
