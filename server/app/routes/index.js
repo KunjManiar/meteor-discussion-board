@@ -3,14 +3,14 @@ import express from "express";
 import multer from "multer";
 import cloudinary from "cloudinary";
 import fs from "fs";
-import app from "../app";
+import jwt from "jsonwebtoken";
 
 import { FeedCollection } from "../../../imports/db/FeedCollection";
 
 cloudinary.config({
-	cloud_name: process.env.cloud_name,
-	api_key: process.env.api_key,
-	api_secret: process.env.api_secret,
+	cloud_name: Meteor.settings.cloudinary.cloud_name,
+	api_key: Meteor.settings.cloudinary.api_key,
+	api_secret: Meteor.settings.cloudinary.api_secret,
 });
 
 const router = express.Router();
@@ -34,7 +34,6 @@ const storage = multer.diskStorage({
 	},
 
 	filename: function (req, file, cb) {
-		console.log(file);
 		const { fileName, extension } = fileNameExt(file.originalname);
 		cb(null, fileName + "_" + new Date().valueOf() + "." + extension);
 	},
@@ -79,28 +78,26 @@ function asyncFeedAddCollection({ userId, heading, text, image }) {
 }
 
 router.post(
-	"/kunj-test-file-upload",
+	"/api/new-discussion",
 	upload.any("file"),
 	async (req, res, next) => {
 		try {
-			console.log(req.body);
-			// for (let i in req.body) {
-			// 	console.log(req.body.text);
-			// }
+			const website = req.headers.host;
+			const secret =
+				Meteor.settings.jwt_secrets.part_one +
+				website +
+				Meteor.settings.jwt_secrets.part_two;
+
+			const { heading, text, token } = req.body;
+			const decoded = jwt.verify(token, secret);
+
+			console.log(decoded);
+
 			const file = req.files[0];
-			console.log(req.files[0]);
 
 			const fileAndExt = fileNameExt(file.filename);
-			// cloudinary.v2.uploader.upload(
-			// 	file.destination + file.filename,
-			// 	{ public_id: `discussion-image/${fileAndExt.fileName}` },
-			// 	function (error, result) {
-			// 		console.log(error);
-			// 		console.log(result);
-			// 	},
-			// );
 
-			const userId = "FeH356bXezexcWQsj";
+			const userId = decoded.userId;
 
 			const file_path = file.destination + file.filename;
 			const file_upload_options = {
@@ -112,8 +109,6 @@ router.post(
 				file_upload_options,
 			);
 
-			const { heading, text } = req.body;
-
 			const result = await asyncFeedAddCollection({
 				userId,
 				heading,
@@ -121,12 +116,6 @@ router.post(
 				image: cloudinary_op.secure_url,
 			});
 
-			// const result = await asyncFeedAdd({
-			// 	// heading,
-			// 	// text,
-			// 	// image: cloudinary_op.secure_url,
-			// });
-			console.log(result);
 			res.sendStatus(200);
 		} catch (err) {
 			console.log(err);

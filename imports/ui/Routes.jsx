@@ -20,6 +20,7 @@ import App from "./App";
 import LoginForm from "./pages/Login";
 import RegisterForm from "./pages/Register";
 import NewFeed from "./pages/NewFeed";
+import Script from "./pages/Script";
 
 Meteor.startup(() => {
 	ReactDOM.render(
@@ -33,6 +34,9 @@ Meteor.startup(() => {
 				</Route>
 				<Route path="/new-discussion">
 					<NewFeed />
+				</Route>
+				<Route path="/get-script">
+					<Script />
 				</Route>
 				<Route exact path="/">
 					<App />
