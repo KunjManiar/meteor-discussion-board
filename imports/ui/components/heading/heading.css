@@ -11,6 +11,11 @@
 .heading-left {
 	flex-direction: row;
 	justify-content: flex-start;
+	cursor: pointer;
+	font-family: "AdobeCaslonW01", sans-serif;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 25px;
 }
 
 .heading-right {

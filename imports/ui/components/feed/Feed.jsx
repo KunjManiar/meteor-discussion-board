@@ -51,6 +51,11 @@ export default Feed = ({ feed }) => {
 					<h1 className="feed-heading">{feed.heading}</h1>
 				</div>
 			</div>
+			{!!feed.image && (
+				<div className="feed-image-div">
+					<img src={feed.image} className="feed-image" />
+				</div>
+			)}
 			<div className="feed-description">
 				<pre className="feed-description-pre">{feed.text}</pre>
 			</div>
