@@ -45,3 +45,11 @@
 
 .feed-heading {
 }
+
+.feed-image {
+	max-width: 90%;
+	max-height: 300px;
+	box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.4) !important;
+	margin-top: 5px;
+	margin-bottom: 25px;
+}

@@ -3,9 +3,10 @@ import { check } from "meteor/check";
 import { FeedCollection } from "../../db/FeedCollection";
 
 Meteor.methods({
-	"feeds.insert"({ heading, text }) {
+	"feeds.insert"({ heading, text, image }) {
 		check(heading, String);
 		check(text, String);
+		// check(image, String);
 
 		if (!this.userId) {
 			throw new Meteor.Error("Not authorized.");
@@ -13,6 +14,7 @@ Meteor.methods({
 		FeedCollection.insert({
 			heading,
 			text,
+			image,
 			createdAt: new Date(),
 			userId: this.userId,
 		});
