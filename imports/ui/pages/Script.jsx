@@ -38,13 +38,10 @@ export default Script = () => {
 
 		Meteor.call("user.sign_jwt", { website }, (error, res) => {
 			if (error) {
-				// console.log(website);
 				console.log(error);
 				setErr(error.error);
 			} else {
-				// console.log(res);
 				setMeta(res.token);
-				// history.push("/");
 			}
 		});
 	};
@@ -52,10 +49,6 @@ export default Script = () => {
 	handleCopy = (e) => {
 		e.preventDefault();
 		const script = `<script id="meteor-discussion-script" meta="${meta}" src="https://kunjmaniar.github.io/discussion-script/discussion-board-script.js"></script>`;
-		// e.clipboardData.setData(
-		// 	"text/plain",
-		// 	script,
-		// );
 		navigator.clipboard.writeText(script);
 	};
 
@@ -67,21 +60,6 @@ export default Script = () => {
 				Click Screenshots and Start Discussion
 			</h3>
 			<p style={{ color: "#B00020" }}>{err ? `❗️ ${err}` : ""}</p>
-
-			{/* {feeds.map((feed) => {
-				return (
-					<Feed
-						heading={feed.heading}
-						text={feed.text}
-						createdAt={feed.createdAt}
-						userId={feed.userId}
-						feed={feed}
-						key={feed._id}
-					/>
-				);
-			})} */}
-			{/* <Feed />
-			<Feed /> */}
 			<div style={{ maxWidth: 450 }}>
 				<CustomInput
 					type="text"
@@ -114,7 +92,6 @@ export default Script = () => {
 `}
 				</pre>
 			)}
-			{/* <p>script</p> */}
 		</div>
 	);
 };
