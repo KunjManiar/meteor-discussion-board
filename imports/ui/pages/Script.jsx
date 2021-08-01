@@ -21,29 +21,7 @@ export default Script = () => {
 	if (!user) {
 		history.push("/login");
 	}
-	// const { feeds, isLoading } = useTracker(() => {
-	// 	const noDataAvailable = { feeds: [] };
-	// 	if (!Meteor.user()) {
-	// 		return noDataAvailable;
-	// 	}
-	// 	const handler = Meteor.subscribe("feeds");
-
-	// 	if (!handler.ready()) {
-	// 		return { ...noDataAvailable, isLoading: true };
-	// 	}
-
-	// 	const feeds = FeedCollection.find(
-	// 		{},
-	// 		{
-	// 			sort: { createdAt: -1 },
-	// 		},
-	// 	).fetch();
-	// 	// const pendingTasksCount = FeedCollection.find(pendingOnlyFilter).count();
-	// 	// console.log(feeds);
-	// 	return { feeds, isLoading: false };
-	// });
 	const isLoading = false;
-	// console.log(feeds);
 
 	if (isLoading) {
 		return <Loader />;
